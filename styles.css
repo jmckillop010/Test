@@ -244,9 +244,6 @@ flex-direction: column;
     height: calc(center+5px);    
 }
 
-/* ===========================
-   MOBILE-ONLY PATCH
-=========================== */
 @media (max-width: 768px) {
 
     /* HEADER */
@@ -283,11 +280,12 @@ flex-direction: column;
     }
 
     ul li a {
-        width: 90% !important;
+        width: auto !important; /* Let width fit content instead of stretching */
         max-width: 300px !important;
-        padding: 12px !important;
+        padding: 10px 20px !important; /* Adjust padding to look natural */
         margin: 5px 0 !important;
-        font-size: 0.9rem !important;
+        font-size: 0.95rem !important;
+        text-align: center !important;
     }
 
     /* HOME CONTENT BOXES */
@@ -304,8 +302,8 @@ flex-direction: column;
 
     .content-box-home img {
         width: 100% !important;
-        max-height: 200px !important;
-        object-fit: cover !important;
+        height: auto !important; /* Keep natural aspect ratio */
+        object-fit: contain !important; /* Prevent squishing */
         margin-bottom: 10px !important;
     }
 
@@ -319,6 +317,7 @@ flex-direction: column;
     .aboutus-intro img {
         width: 90% !important;
         max-width: 320px !important;
+        height: auto !important;
         margin-bottom: 10px !important;
     }
 
