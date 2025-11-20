@@ -242,119 +242,88 @@ flex-direction: column;
 
 
 
-/* ===== Responsive fixes — paste at the very end of styles.css ===== */
+/* ===========================
+   MOBILE FIXES ONLY (<768px)
+   =========================== */
+@media (max-width: 768px) {
 
-/* Make images fluid by default and remove fixed heights */
-header, .header { /* accept either header or .header */
-  box-sizing: border-box;
+    /* Stack the 3 homepage boxes */
+    .content-row-home {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .content-box-home {
+        width: 90%;
+        height: auto; /* allow natural height */
+    }
+
+    .content-box-home img {
+        width: 70%;
+        height: auto;
+    }
+
+    /* Header fixes */
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .header h1 {
+        margin-right: 0; /* remove desktop offset */
+    }
+
+    .header a {
+        position: static; /* reset link shifting */
+        margin-bottom: 10px;
+    }
+
+    .header img {
+        width: 80px; /* safe mobile size */
+        height: auto;
+    }
+
+    /* Nav becomes vertical */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        width: 90%;
+        padding: 12px 16px;
+    }
+
+    /* About us / Contact us sections to full width */
+    .aboutus-section,
+    .aboutus-intro,
+    .testimony-row,
+    .contactus-row {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .testimony-box,
+    .companyinfo-box {
+        width: 95%;
+    }
+
+    /* Footer fixes */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+        height: auto;
+    }
+
+    footer .footer-icons {
+        position: static;
+        margin-top: 15px;
+        gap: 20px;
+    }
 }
-.header img,
-.content-box-home img,
-.aboutus-intro img,
-.testimony-box img,
-.companyinfo-box img,
-footer img {
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  display: block;
-}
-
-/* Remove inline HTML width/height priority by using more specific CSS */
-.content-box-home img {
-  width: 60%;           /* desktop-friendly default inside the box */
-  height: auto;
-  margin: 0 auto 10px;
-}
-
-/* Make the layout responsive below 1024px for testing; change to 768px later if you prefer */
-@media (max-width: 1024px) {
-
-  /* Stack the three content boxes */
-  .content-row-home {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center; /* center boxes */
-  }
-
-  .content-box-home {
-    width: 92% !important;  /* nearly full width on small screens */
-    height: auto !important; /* remove fixed height */
-    padding: 18px;
-  }
-
-  .content-box-home img {
-    width: 70% !important;
-    height: auto !important;
-  }
-
-  /* Header: stack logo and title */
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 16px;
-  }
-
-  .header img {
-    width: 64px;   /* smaller logo on phones */
-    height: auto;
-    margin-bottom: 8px;
-  }
-
-  .header h1 {
-    margin: 0;
-    font-size: 1.3rem;
-    margin-right: 0;
-  }
-
-  .header a {
-    position: static;
-    left: auto;
-    display: inline-block;
-    margin-bottom: 6px;
-  }
-
-  /* Navigation: make vertical and full width */
-  nav ul {
-    flex-direction: column;
-    gap: 8px;
-    padding: 12px 0;
-  }
-
-  nav ul li a {
-    width: 92%;
-    box-sizing: border-box;
-    padding: 12px 16px;
-    display: inline-block;
-  }
-
-  /* About / contact / testimonial boxes full width */
-  .aboutus-section,
-  .aboutus-intro,
-  .testimony-row,
-  .contactus-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .testimony-box,
-  .companyinfo-box {
-    width: 94% !important;
-  }
-
-  /* Footer cleanup */
-  footer {
-    flex-direction: column;
-    position: static;
-    padding: 18px;
-  }
-
-  footer .footer-icons {
-    position: static;
-    margin-top: 12px;
-    gap: 20px;
-  }
-}
-
-/* Optional: use (max-width: 768px) instead of 1024px when you're happy */
