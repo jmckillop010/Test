@@ -277,14 +277,15 @@ flex-direction: column;
         align-items: center !important;
         padding: 0 !important;
         margin: 10px 0 !important;
+        gap: 5px !important;
     }
 
     ul li a {
-        width: auto !important; /* Let width fit content instead of stretching */
-        max-width: 300px !important;
-        padding: 10px 20px !important; /* Adjust padding to look natural */
-        margin: 5px 0 !important;
+        width: auto !important;
+        max-width: 90% !important;
+        padding: 10px 20px !important;
         font-size: 0.95rem !important;
+        margin: 5px 0 !important;
         text-align: center !important;
     }
 
@@ -298,12 +299,13 @@ flex-direction: column;
     .content-box-home {
         width: 90% !important;
         height: auto !important;
+        padding: 15px !important;
     }
 
     .content-box-home img {
         width: 100% !important;
-        height: auto !important; /* Keep natural aspect ratio */
-        object-fit: contain !important; /* Prevent squishing */
+        height: auto !important;
+        object-fit: contain !important;
         margin-bottom: 10px !important;
     }
 
@@ -335,6 +337,7 @@ flex-direction: column;
 
     .testimony-box {
         width: 90% !important;
+        padding: 15px !important;
     }
 
     /* CONTACT */
@@ -346,6 +349,7 @@ flex-direction: column;
 
     .companyinfo-box {
         width: 90% !important;
+        padding: 15px !important;
     }
 
     /* FOOTER */
@@ -370,8 +374,20 @@ flex-direction: column;
 
     /* TITLE BOX */
     .title-box {
-        width: 80% !important;
+        width: 90% !important;
         max-width: 250px !important;
         height: auto !important;
+    }
+
+    /* BUTTONS & INPUTS */
+    .content-box-home input, 
+    .content-box-home button {
+        width: 90% !important;
+        max-width: 300px !important;
+    }
+
+    /* ADJUST MARGINS */
+    .content-box-home p, .testimony-box p {
+        font-size: 0.95rem !important;
     }
 }
