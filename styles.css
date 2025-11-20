@@ -1,12 +1,9 @@
 /* ===========================
-   DESKTOP STYLES (ORIGINAL)
+   ORIGINAL DESKTOP CSS
 =========================== */
 
 body {
     background-color: #dceaf7;  /* Light blue */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 ul {
@@ -53,18 +50,18 @@ h1 {
 .header img {
     height: 100px;
     width: 100px;
-    position: relative;
+    position: relative;  /* Changed from absolute to relative as I encoutered hyperlink issues */
     align-items: center;
 }
 
 .header h1 {
     flex: 1;
     text-align: center;
-    margin-right: 100px;
+    margin-right: 100px; /* Allows the text to stay centered without the image position affecting it */
 }
 
 .header a {
-    left: 100px;
+    left: 100px; /* Adjusting image position with the link to fix link click area */
     position: relative;
     display: inline-block;
 }
@@ -72,6 +69,7 @@ h1 {
 .header a img {
     display: block;
 }
+
 
 .content {
     text-align: center;
@@ -100,7 +98,6 @@ h1 {
     height: 175px;
     max-width: 100%;
 }
-
 .content-box-home form {
     display: flex;
     flex-direction: column;
@@ -108,7 +105,7 @@ h1 {
 }
 
 .content-box-home input {
-    padding: 8px;
+    padding : 8px;
     margin: 8px;
     width: 80%;
 }
@@ -117,73 +114,67 @@ h1 {
     padding: 10px 30px;
     margin-top: 10px;
 }
-
-/* ABOUT US STYLES */
+/*aboutus styles*/
 .aboutus-section{
-    margin: 20px auto;
-    max-width: 1000px;
-    font-family: Arial, sans-serif;
+  margin: 20px auto;
+  max-width: 1000px;
+  font-family: Arial, sans-serif;
     display: flex;
     flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .aboutus-intro{
     display: flex;
     gap: 30px;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
-}
 
+}
 .aboutus-intro img{
-    width: 350px;
+    width: 350px;       /*might change*/
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0   2px 6px rgba(0, 0, 0, 0.1);
+}.company-text p {
+  font-size: 1rem;
+  line-height: 1.6; /*do i need this*/
+  color: black;
+  text-align: left;
 }
-
-.company-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: black;
-    text-align: left;
-}
-
 .testimony-row {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
 
+  
+}
 .testimony-box {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 8px;
-    width: 48%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    display: block;
-    box-sizing: border-box;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 48%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: block;
+  box-sizing: border-box;
 }
-
 .testimony-box p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: black;
+  margin-bottom: 10px;
+  font-size: 1rem;  /*1rem usually 16px but uses the html base format*/
+  color: black;
 }
-
 .testimony-box strong {
-    display: block;
-    font-size: 1rem;
-    color: #666;
-    margin-top: 10px;
+  display: block;
+  font-size: 1rem;
+  color: #666;  /*colour difference not necessary*/
+  margin-top: 10px;
 }
 
-/* FOOTER */
+
 footer {
     background-color: rgb(81, 146, 224);
     text-align: center;
@@ -208,187 +199,180 @@ footer .footer-icons {
     right: 60px;
 }
 
-footer .footer-icons img {
-    width: 50px;
-    height: 50px;
-}
-
-/* CONTACT US STYLES */
+/*contactus styles*/
 .contactus-section{
-    margin: 20px auto;
-    max-width: 1000px;
-    font-family: Arial, sans-serif;
+ margin: 20px auto;
+  max-width: 1000px;
+  font-family: Arial, sans-serif;
     display: flex;
     flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: center;
+        justify-content: center;
 }
-
 .contactus-intro{
     gap: 30px;
     align-items: center;
     margin-bottom: 25px;
 }
-
 .contactus-row {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-
 .companyinfo-box {
-    flex-direction: column;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 8px;
-    width: 48%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    display: block;
-    box-sizing: border-box;
+flex-direction: column;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 48%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: block;
+  box-sizing: border-box
 }
-
 .title-box{
     margin: 20px auto;
     text-align: center;
+    align-self: calc(center+50px);  /*this calc might be useless*/
     background-color: rgb(161, 206, 255);
     border-radius: 5.5px;
     border-color: #333;
     border-width: 4px;
     width: 200px;
+    height: calc(center+5px);    
 }
 
 /* ===========================
-   MOBILE-ONLY FIXES
+   MOBILE-ONLY PATCH
 =========================== */
 @media (max-width: 768px) {
 
     /* HEADER */
     .header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 15px 10px;
-        text-align: center;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 15px 10px !important;
+        text-align: center !important;
     }
 
     .header img {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 10px;
+        width: 70px !important;
+        height: 70px !important;
+        margin-bottom: 10px !important;
     }
 
     .header h1 {
-        margin: 0;
-        font-size: 1.3rem;
-        text-align: center;
+        margin: 0 !important;
+        font-size: 1.3rem !important;
+        text-align: center !important;
     }
 
     .header a {
-        left: 0;
+        left: 0 !important;
     }
 
     /* NAVIGATION */
     ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        margin: 10px 0;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
+        margin: 10px 0 !important;
     }
 
     ul li a {
-        width: 90%;
-        max-width: 300px;
-        padding: 12px;
-        margin: 5px 0;
-        font-size: 0.9rem;
+        width: 90% !important;
+        max-width: 300px !important;
+        padding: 12px !important;
+        margin: 5px 0 !important;
+        font-size: 0.9rem !important;
     }
 
     /* HOME CONTENT BOXES */
     .content-row-home {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
     }
 
     .content-box-home {
-        width: 90%;
-        height: auto;
+        width: 90% !important;
+        height: auto !important;
     }
 
     .content-box-home img {
-        width: 100%;
-        max-height: 200px;
-        object-fit: cover;
-        margin-bottom: 10px;
+        width: 100% !important;
+        max-height: 200px !important;
+        object-fit: cover !important;
+        margin-bottom: 10px !important;
     }
 
     /* ABOUT US */
     .aboutus-section, .aboutus-intro {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
     }
 
     .aboutus-intro img {
-        width: 90%;
-        max-width: 320px;
-        margin-bottom: 10px;
+        width: 90% !important;
+        max-width: 320px !important;
+        margin-bottom: 10px !important;
     }
 
     .company-text p {
-        text-align: center;
-        font-size: 0.95rem;
+        text-align: center !important;
+        font-size: 0.95rem !important;
     }
 
     /* TESTIMONY */
     .testimony-row {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
     }
 
     .testimony-box {
-        width: 90%;
+        width: 90% !important;
     }
 
     /* CONTACT */
     .contactus-section, .contactus-row {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
     }
 
     .companyinfo-box {
-        width: 90%;
+        width: 90% !important;
     }
 
     /* FOOTER */
     footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px 10px;
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 20px 10px !important;
     }
 
     footer .footer-icons {
-        position: relative;
-        right: 0;
-        margin-top: 10px;
-        justify-content: center;
-        gap: 15px;
+        position: relative !important;
+        right: 0 !important;
+        margin-top: 10px !important;
+        justify-content: center !important;
+        gap: 15px !important;
     }
 
     footer .footer-icons img {
-        width: 40px;
-        height: 40px;
+        width: 40px !important;
+        height: 40px !important;
     }
 
     /* TITLE BOX */
     .title-box {
-        width: 80%;
-        max-width: 250px;
-        height: auto;
+        width: 80% !important;
+        max-width: 250px !important;
+        height: auto !important;
     }
 }
