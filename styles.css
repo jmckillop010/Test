@@ -248,7 +248,7 @@ flex-direction: column;
 
     /* ================= HEADER ================= */
     .header {
-        flex-direction: column !important;
+        flex-direction: column !important; /* stack vertically */
         align-items: center !important;
         justify-content: center !important;
         padding: 15px 10px !important;
@@ -257,13 +257,18 @@ flex-direction: column;
 
     .header img {
         width: 70px !important;
-        height: 70px !important;
+        height: auto !important; /* keep aspect ratio */
         margin-bottom: 10px !important;
     }
 
     .header h1 {
         margin: 0 !important;
         font-size: 1.3rem !important;
+        text-align: center !important;
+    }
+
+    .header a {
+        left: 0 !important;
     }
 
     /* ================= NAVIGATION ================= */
@@ -303,9 +308,15 @@ flex-direction: column;
 
     .content-box-home img {
         width: 100% !important;
-        height: 200px !important;
-        object-fit: cover !important; /* Keeps image aspect ratio, fills container */
+        height: auto !important; /* natural aspect ratio */
+        object-fit: contain !important; /* prevent squishing */
         margin-bottom: 10px !important;
+    }
+
+    /* Ensure Deal of the Week image does not squash */
+    .content-box-home:nth-child(2) img {
+        max-height: 200px !important; /* same height as other box */
+        object-fit: cover !important;
     }
 
     /* ================= ABOUT US ================= */
@@ -390,5 +401,4 @@ flex-direction: column;
         font-size: 0.95rem !important;
         text-align: center !important;
     }
-
 }
