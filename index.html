@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>MetPCs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="index.html">
+         <img src="https://i.ibb.co/FLmxL5nm/Met-PCs-logo.png" alt="logo" width="50" height="50">
+        </a>
+        <h1> Welcome To MetPCs</h1>
+    </div>
+    
+
+    <nav>
+    <ul>
+        <li><a href="pre-built.html">Pre-built</a></li>
+        <li><a href="laptops.html">Laptops</a></li>
+        <li><a href="parts.html">Parts</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="about us.html">About us</a></li>
+        <li><a href="contact us.html">Contact us</a></li>
+        </ul>
+</nav>
+
+<div class="content-row-home">
+    <div class="content-box-home">
+    <h3>Most popular this week </h3>
+<img src="https://www.pcspecialist.co.uk/images/cases/25012/h.png?1761132764" alt="PC Image" width="30%" >
+    <p><b>Custom Built Gaming PC</b><br>
+   <p>Price: £1499.99</p>
+</div>
+
+    <div class="content-box-home">
+    <h3>Deal of the week </h3>
+<img src="https://www.pcspecialist.co.uk/images/products/23099/1.png?1755783399" alt="Laptop Image" width="30%" >
+    <p> <b>Gaming Laptop</b><br></p>
+        <p>Original price <del>£1249.99</del><br>
+        Sale price £999.99
+    </p>
+</div>
+
+    <div class="content-box-home">
+    <h3>Subscribe to our newsletter!</h3>
+    <p>Get the latest deals and offers straight to your inbox!</p>
+    <form>
+        <label for="name">Name:</label>
+        <input type ="name" placeholder="Enter your name..." required>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter your email..." required>
+        <button type="submit">Subscribe</button>
+
+        <script>
+            const newsletterform = document.querySelector('form');
+            newsletterform.addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Thank you for subscribing to our newsletter!');
+                newsletterform.reset();
+            });
+        </script>
+    </form>
+</div>
+</div>
+
+<footer>
+    <div class="footer-text">
+    <h3>2025 MetPCs. All rights reserved.</h3>
+    </div>
+    <div class="footer-icons">
+    <a href="https://www.instagram.com/belfastmet/?hl=en" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/640px-Instagram_logo_2016.svg.png" alt="Instagram logo" width="50px" height="50px">
+        </a>
+        <a href="https://www.facebook.com/belfastmet/?locale=en_GB" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1024px-2021_Facebook_icon.svg.png?20220821121039" alt="Facebook logo" height="50px" wedith="50px">
+        </a>
+</div>
+
+</footer>
+
+</body>
+
+</html>
