@@ -246,7 +246,7 @@ flex-direction: column;
 
 @media (max-width: 768px) {
 
-    /* HEADER */
+    /* ================= HEADER ================= */
     .header {
         flex-direction: column !important;
         align-items: center !important;
@@ -264,32 +264,28 @@ flex-direction: column;
     .header h1 {
         margin: 0 !important;
         font-size: 1.3rem !important;
-        text-align: center !important;
     }
 
-    .header a {
-        left: 0 !important;
-    }
-
-    /* NAVIGATION */
+    /* ================= NAVIGATION ================= */
     ul {
         flex-direction: column !important;
         align-items: center !important;
         padding: 0 !important;
         margin: 10px 0 !important;
-        gap: 5px !important;
+        gap: 8px !important;
     }
 
     ul li a {
-        width: auto !important;
-        max-width: 90% !important;
-        padding: 10px 20px !important;
+        width: 90% !important;
+        max-width: 300px !important;
+        padding: 12px 15px !important;
         font-size: 0.95rem !important;
         margin: 5px 0 !important;
         text-align: center !important;
+        border-radius: 5px !important;
     }
 
-    /* HOME CONTENT BOXES */
+    /* ================= HOME CONTENT BOXES ================= */
     .content-row-home {
         flex-direction: column !important;
         gap: 20px !important;
@@ -300,16 +296,19 @@ flex-direction: column;
         width: 90% !important;
         height: auto !important;
         padding: 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
     .content-box-home img {
         width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important;
+        height: 200px !important;
+        object-fit: cover !important; /* Keeps image aspect ratio, fills container */
         margin-bottom: 10px !important;
     }
 
-    /* ABOUT US */
+    /* ================= ABOUT US ================= */
     .aboutus-section, .aboutus-intro {
         flex-direction: column !important;
         align-items: center !important;
@@ -320,7 +319,6 @@ flex-direction: column;
         width: 90% !important;
         max-width: 320px !important;
         height: auto !important;
-        margin-bottom: 10px !important;
     }
 
     .company-text p {
@@ -328,7 +326,7 @@ flex-direction: column;
         font-size: 0.95rem !important;
     }
 
-    /* TESTIMONY */
+    /* ================= TESTIMONY ================= */
     .testimony-row {
         flex-direction: column !important;
         gap: 15px !important;
@@ -340,7 +338,7 @@ flex-direction: column;
         padding: 15px !important;
     }
 
-    /* CONTACT */
+    /* ================= CONTACT ================= */
     .contactus-section, .contactus-row {
         flex-direction: column !important;
         gap: 15px !important;
@@ -352,7 +350,7 @@ flex-direction: column;
         padding: 15px !important;
     }
 
-    /* FOOTER */
+    /* ================= FOOTER ================= */
     footer {
         flex-direction: column !important;
         text-align: center !important;
@@ -372,22 +370,25 @@ flex-direction: column;
         height: 40px !important;
     }
 
-    /* TITLE BOX */
+    /* ================= TITLE BOX ================= */
     .title-box {
         width: 90% !important;
         max-width: 250px !important;
         height: auto !important;
     }
 
-    /* BUTTONS & INPUTS */
+    /* ================= INPUTS & BUTTONS ================= */
     .content-box-home input, 
     .content-box-home button {
         width: 90% !important;
         max-width: 300px !important;
     }
 
-    /* ADJUST MARGINS */
-    .content-box-home p, .testimony-box p {
+    /* ================= TEXT ADJUSTMENTS ================= */
+    .content-box-home p, 
+    .testimony-box p {
         font-size: 0.95rem !important;
+        text-align: center !important;
     }
+
 }
