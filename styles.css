@@ -1,10 +1,5 @@
-/* ========== Base / Desktop styles (preserves your PC layout) ========== */
-
 body {
     background-color: #dceaf7;  /* Light blue */
-    margin: 0;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
 }
 
 ul {
@@ -15,11 +10,6 @@ ul {
     background-color: #dceaf7;
     display:flex;
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-ul li {
-    list-style: none;
 }
 
 ul li a {
@@ -42,10 +32,8 @@ h1 {
     text-align: center;
     color: #333;
     font-family: Arial, sans-serif;
-    margin: 0;
 }
 
-/* Header (desktop) */
 .header {
     background-color: rgb(81, 146, 224);
     color: white;
@@ -55,37 +43,40 @@ h1 {
     position: relative;
 }
 
-/* Use the logo size that matches your HTML default (50x50) */
 .header img {
-    height: 50px;
-    width: 50px;
-    display: block;
-    margin-right: 16px;
+    height: 100px;
+    width: 100px;
+    position: relative;  /* Changed from absolute to relative as I encoutered hyperlink issues */
+    align-items: center;
 }
 
-/* Keep heading centered in the header layout */
 .header h1 {
     flex: 1;
     text-align: center;
-    margin-right: 100px; /* keep the desktop offset you used to center visually */
-    font-size: 1.6rem;
+    margin-right: 100px; /* Allows the text to stay centered without the image position affecting it */
 }
 
-/* ensure the link around logo does not shift layout */
 .header a {
+    left: 100px; /* Adjusting image position with the link to fix link click area */
     position: relative;
     display: inline-block;
-    text-decoration: none;
-    color: inherit;
 }
 
-/* Allow images inside content boxes to scale but default desktop sizes will be used */
+.header a img {
+    display: block;
+}
+
+
+.content {
+    text-align: center;
+    margin: 20px;
+}
+
 .content-row-home {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
-    gap: 20px;
 }
 
 .content-box-home {
@@ -96,21 +87,13 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     height: 350px;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
 .content-box-home img {
     margin-bottom: 10px;
     height: 175px;
     max-width: 100%;
-    object-fit: contain;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
-
-/* Newsletter form inside content box */
 .content-box-home form {
     display: flex;
     flex-direction: column;
@@ -121,55 +104,50 @@ h1 {
     padding : 8px;
     margin: 8px;
     width: 80%;
-    box-sizing: border-box;
 }
 
 .content-box-home button {
     padding: 10px 30px;
     margin-top: 10px;
 }
-
-/* About us / testimonies / contact boxes (desktop) */
+/*aboutus styles*/
 .aboutus-section{
   margin: 20px auto;
   max-width: 1000px;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+  font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 .aboutus-intro{
     display: flex;
     gap: 30px;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
-}
 
+}
 .aboutus-intro img{
-    width: 350px;
+    width: 350px;       /*might change*/
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.company-text p {
+    box-shadow: 0   2px 6px rgba(0, 0, 0, 0.1);
+}.company-text p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.6; /*do i need this*/
   color: black;
   text-align: left;
 }
-
 .testimony-row {
   display: flex;
   gap: 20px;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
-}
 
+  
+}
 .testimony-box {
   background-color: #f2f2f2;
   padding: 20px;
@@ -177,23 +155,22 @@ h1 {
   width: 48%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
+  display: block;
   box-sizing: border-box;
 }
-
 .testimony-box p {
   margin-bottom: 10px;
-  font-size: 1rem;
+  font-size: 1rem;  /*1rem usually 16px but uses the html base format*/
   color: black;
 }
-
 .testimony-box strong {
   display: block;
   font-size: 1rem;
-  color: #666;
+  color: #666;  /*colour difference not necessary*/
   margin-top: 10px;
 }
 
-/* Footer (desktop) */
+
 footer {
     background-color: rgb(81, 146, 224);
     text-align: center;
@@ -202,7 +179,6 @@ footer {
     display: flex;
     align-items: center;
     position: relative;
-    box-sizing: border-box;
 }
 
 footer .footer-text {
@@ -217,220 +193,124 @@ footer .footer-icons {
     gap: 30px;
     position: absolute;
     right: 60px;
-    top: 6px;
 }
 
-/* Contact us boxes desktop */
+/*contactus styles*/
 .contactus-section{
  margin: 20px auto;
   max-width: 1000px;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+  font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+        justify-content: center;
 }
-
 .contactus-intro{
     gap: 30px;
     align-items: center;
     margin-bottom: 25px;
 }
-
 .contactus-row {
   display: flex;
   gap: 20px;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 .companyinfo-box {
+flex-direction: column;
   background-color: #f2f2f2;
   padding: 20px;
   border-radius: 8px;
   width: 48%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
-  box-sizing: border-box;
+  display: block;
+  box-sizing: border-box
 }
-
-/* Title box cleanup (desktop) - remove invalid calc usage */
 .title-box{
     margin: 20px auto;
     text-align: center;
+    align-self: calc(center+50px);  /*this calc might be useless*/
     background-color: rgb(161, 206, 255);
     border-radius: 5.5px;
-    border: 4px solid #333;
+    border-color: #333;
+    border-width: 4px;
     width: 200px;
-    height: auto;
-    padding: 8px 12px;
+    height: calc(center+5px);    
 }
 
-/* make sure footer images don't overflow */
-footer img {
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
-}
 
-/* ------------------------------------------------------------------
-   MOBILE ONLY fixes (safe) - This block ONLY applies when viewport <=768px
-   ------------------------------------------------------------------ */
+/* ============================
+      MOBILE FIXES ONLY
+   ============================ */
 @media (max-width: 768px) {
 
-    /* Stack the three content boxes vertically */
-    .content-row-home {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 12px 0;
-    }
-
-    .content-box-home {
-        width: 92%;
-        height: auto;
-    }
-
-    .content-box-home img {
-        width: 70%;
-        height: auto;
-    }
-
-    /* Header stacked and logo smaller */
+    /* Header layout fix on phone */
     .header {
         flex-direction: column;
+        padding: 20px;
         text-align: center;
-        padding: 15px;
-    }
-
-    .header img {
-        width: 80px;
-        height: auto;
-        margin: 0 0 8px 0;
-    }
-
-    .header h1 {
-        margin-right: 0;
-        font-size: 1.2rem;
     }
 
     .header a {
-        position: static;
+        left: 0;              /* remove desktop offset */
         margin-bottom: 10px;
     }
 
-    /* Nav becomes vertical and full width on small screens */
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        padding: 8px 0;
+    .header img {
+        height: 70px;
+        width: 70px;
     }
 
-    nav ul li a {
-        width: 92%;
-        padding: 12px 16px;
-        box-sizing: border-box;
-    }
-
-    /* About / testimonials / contact stack */
-    .aboutus-section,
-    .aboutus-intro,
-    .testimony-row,
-    .contactus-row {
-        flex-direction: column;
-        align-items: center;
+    .header h1 {
+        margin-right: 0;      /* stop pushing the text */
         text-align: center;
     }
 
-    .aboutus-intro img {
+    /* Navigation buttons stack properly */
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li a {
+        width: 80%;
+        padding: 12px;
+        margin: 5px 0;
+    }
+
+    /* Home page boxes stack vertically */
+    .content-row-home {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content-box-home {
         width: 90%;
+        height: auto;  /* allow images to size naturally */
+    }
+
+    .content-box-home img {
         height: auto;
+        width: 80%;
     }
 
-    .testimony-box,
-    .companyinfo-box {
-        width: 95%;
-    }
-
-    /* Footer stacked and icons below */
+    /* Footer icons fix */
     footer {
         flex-direction: column;
-        position: static;
-        padding: 18px 10px;
+        height: auto;
+        padding: 20px;
     }
 
     footer .footer-icons {
-        position: static;
-        margin-top: 12px;
-        gap: 16px;
+        position: static;  /* removes absolute positioning */
+        margin-top: 10px;
+        justify-content: center;
     }
-}
 
-/* ===== Desktop-only fixes (>= 769px) =====
-   Fixes: logo size, footer icon placement & sizes, product image consistency
-*/
-@media (min-width: 769px) {
-
-  /* Force the header logo to the desired size and keep aspect ratio */
-  .header a img,
-  .header img {
-    width: 50px !important;
-    height: 50px !important;
-    max-width: 50px !important;
-    object-fit: contain;
-    display: block;
-    margin: 0 16px 0 0; /* keeps spacing from title */
-  }
-
-  /* Make sure the header text stays visually centered */
-  .header h1 {
-    margin-right: 100px;  /* preserves your desktop centering */
-  }
-
-  /* Footer icons - position nicely on the right and vertically centered */
-  footer .footer-icons {
-    position: absolute;
-    right: 60px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 24px;
-    align-items: center;
-  }
-
-  /* Force consistent icon image sizing (fixes the Facebook icon being too big) */
-  footer .footer-icons img {
-    width: 50px !important;
-    height: 50px !important;
-    max-width: none;
-    object-fit: contain;
-    display: inline-block;
-  }
-
-  /* Prevent the footer icons from overlapping text on very wide small screens */
-  footer {
-    min-height: 64px;
-  }
-
-  /* Normalize product images inside the content boxes so they match */
-  .content-box-home img {
-    width: auto !important;      /* override inline width attributes */
-    max-width: 100%;
-    height: 175px;               /* consistent height for desktop look */
-    object-fit: cover;           /* crop gently to fill space consistently */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* If one box uses a different aspect (e.g. Deal of the week), make sure its image behaves same */
-  .content-row-home .content-box-home:nth-child(2) img {
-    /* explicit same rules for the second box (deal of week) */
-    width: auto !important;
-    max-width: 100%;
-    height: 175px;
-    object-fit: cover;
-  }
-
+    footer .footer-icons img {
+        height: 40px;      /* consistent icon size */
+        width: 40px;
+    }
 }
